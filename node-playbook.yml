@@ -3,4 +3,4 @@
   tasks:
   - name: join cluster systemd
     sudo: yes
-    command: kubeadm join XXXX:6443 --token nntug7.gj0pm4kmt5po6dfn --discovery-token-ca-cert-hash sha256:9bea0bab583e8c72dc32bb576e747408f58f423c63c50512ab082c9b78a3eecf
+    command: kubeadm join XXXX:6443 --token TOKEN --discovery-token-ca-cert-hash sha256:HASH
