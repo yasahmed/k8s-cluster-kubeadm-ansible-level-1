@@ -66,8 +66,8 @@
       state: present
       filename: kubernetes.list
 
-  - name: Get IP eth0 addr
-    shell: ifconfig eth0 | grep 'inet' | cut -d{{':'}} -f2 | awk '{ print $2 }'
+  - name: Get IP eth1 addr
+    shell: ifconfig eth1 | grep 'inet' | cut -d{{':'}} -f2 | awk '{ print $2 }'
     register: output
 
   - name: Install Kubernetes binaries

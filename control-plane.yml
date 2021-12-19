@@ -4,7 +4,7 @@
 
     # specify IP range
     - name: initialize the cluster
-      shell: kubeadm init --apiserver-advertise-address={{ ansible_eth0.ipv4.address }} --pod-network-cidr=10.244.0.0/16 >> cluster_initialized.txt
+      shell: kubeadm init --apiserver-advertise-address=192.168.12.10 --pod-network-cidr=10.244.0.0/16 >> cluster_initialized.txt
       args:
         chdir: $HOME
         creates: cluster_initialized.txt
@@ -34,6 +34,3 @@
       args:
         chdir: $HOME
         creates: pod_network_setup.txt
-
-
-      #  sudo chown $(id -u):$(id -g) /home/ahmed/.kube/config

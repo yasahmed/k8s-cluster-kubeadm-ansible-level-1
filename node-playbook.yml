@@ -1,6 +1,6 @@
 - hosts: workers
   become: yes
   tasks:
-  - name: join cluster systemd
+  - name: join k8s cluster 
     sudo: yes
-    command: kubeadm join XXXX:6443 --token nntug7.gj0pm4kmt5po6dfn --discovery-token-ca-cert-hash sha256:9bea0bab583e8c72dc32bb576e747408f58f423c63c50512ab082c9b78a3eecf
+    command: kubeadm join 192.168.12.10:6443 --token XXXX--discovery-token-ca-cert-hash sha256:YYYYY
